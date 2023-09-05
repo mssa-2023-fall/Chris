@@ -1,0 +1,1 @@
+A warning: Long-term exposure to this code may cause loss of sanity, nightmares, or any number of other debilitating side effects. This code is known to the State of California to cause cancer, birth defects, and reproductive harm.
