@@ -34,7 +34,7 @@ internal class Program
         
         StringBuilder receipt = new StringBuilder();
 
-        Console.WriteLine("Please enter the name of the item scanned."+"\n"+"When finished please press 'enter'.");
+        Console.WriteLine("Please enter the name of the item scanned."+"\n"+"When finished please press 'Enter'.");
 
         while (true)
         {
@@ -59,9 +59,9 @@ internal class Program
         decimal totalPrice = subTotal + taxValue;
         decimal memberDiscountTotal = Math.Round(subTotal * memberDiscount, 2);
 
-        Console.WriteLine("Is the customer a MOD4 loyalty rewards member? Press 'Y' for yes and 'N' for no.");
-        string input2 = Console.ReadLine();
-        if (input2 == "y" || input2  == "Y")
+        Console.WriteLine("Is the customer a MOD4 loyalty rewards member? Press 'Y' or 'N'.");
+        string input2 = Console.ReadLine().ToLower();
+        if (input2 == "y")
         {
             loyaltyCustomer = true;
             totalPrice -= totalPrice * memberDiscountTotal;
