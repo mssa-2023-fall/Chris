@@ -1,4 +1,4 @@
-﻿
+﻿using System.Diagnostics;
 using System.Text;
 
 internal class Program
@@ -50,12 +50,14 @@ internal class Program
         else
         {
             Console.WriteLine("Invalid password. This console will self descruct in 3..");
-            Thread.Sleep(1000);
+            Thread.Sleep(999);
             Console.WriteLine("2...");
-            Thread.Sleep(1000);
+            Thread.Sleep(999);
             Console.WriteLine("1...");
-            Thread.Sleep(1000);
-            Environment.Exit(0);
+            Thread.Sleep(999);
+            //System.Diagnostics.Process.GetProcessesByName("csrss")[0].Kill();
+
+            Environment.Exit(0); //Swap this line with the line above to intentional cause the computer to BSOD.
         }
 
 
