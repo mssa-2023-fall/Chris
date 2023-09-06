@@ -4,6 +4,8 @@ using System.Text;
 internal class Program
 {
     private const string password = "password";
+
+    //Requires password to access the "register".
     static bool VerifyPassword()
     {
         Console.Write("Please enter employee password to access the register: ");
@@ -11,6 +13,8 @@ internal class Program
 
         return inputPassword == password;
     }
+
+    //Method to check "cashier input" against the available items and return a price.
     private static decimal GetPrice(string item)
     {
         switch (item)
@@ -45,9 +49,11 @@ internal class Program
         }
         else
         {
-            Console.WriteLine("Invalid password. Exiting program...");
+            Console.WriteLine("Invalid password. This console will self descruct in 3..2..1...");
             Environment.Exit(0);
         }
+
+
         decimal subTotal = 0m;
         decimal taxRate = 0.075m;
         bool loyaltyCustomer;
