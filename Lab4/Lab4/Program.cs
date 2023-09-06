@@ -60,9 +60,11 @@ internal class Program
         decimal memberDiscountValue = Math.Round(decimal.Multiply(subTotal, memberDiscount), 2);
 
         Console.WriteLine("Is the customer a MOD4 loyalty rewards member? Press 'Y' for yes and 'N' for no.");
-        if (Console.ReadLine() == "y" || Console.ReadLine() == "Y")
+        string input2 = Console.ReadLine();
+        if (input2 == "y" || input2  == "Y")
         {
             loyaltyCustomer = true;
+            totalPrice -= totalPrice * memberDiscountValue;
         }
         else
         {
@@ -78,18 +80,11 @@ internal class Program
         Console.WriteLine($"{"Subtotal",-20} {subTotal,8:C2}");
         if (loyaltyCustomer)
         {
-            Console.WriteLine($"{"5% Member Discount",-20} {"-" + memberDiscountValue,8:C2}");
+            Console.WriteLine($"{"5% Member Discount",-20} {"-$" + memberDiscountValue,8:C2}");
         }
         Console.WriteLine("-------------------------------");
-        Console.WriteLine($"{"Tax @ 7.5%",-20} {taxValue,8:C2}");
-        if (loyaltyCustomer)
-        {
-            Console.WriteLine($"{"Total",-20} {totalPrice-memberDiscountValue,8:C2}");
-        }
-        else
-        {
-            Console.WriteLine($"{"Total",-20} {totalPrice,8:C2}");
-        }        
+        Console.WriteLine($"{"Tax @ 7.5%",-20} {taxValue,8:C2}");        
+        Console.WriteLine($"{"Total",-20} {totalPrice,8:C2}");   
         Console.WriteLine("===============================");
         return 0;
     }
