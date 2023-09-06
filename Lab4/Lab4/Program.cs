@@ -49,7 +49,12 @@ internal class Program
         }
         else
         {
-            Console.WriteLine("Invalid password. This console will self descruct in 3..2..1...");
+            Console.WriteLine("Invalid password. This console will self descruct in 3..");
+            Thread.Sleep(1000);
+            Console.WriteLine("2...");
+            Thread.Sleep(1000);
+            Console.WriteLine("1...");
+            Thread.Sleep(1000);
             Environment.Exit(0);
         }
 
