@@ -3,12 +3,21 @@ using System.Text;
 
 internal class Program
 {
+    private const string password = "password";
+    static bool VerifyPassword()
+    {
+        Console.Write("Please enter employee password to access the register: ");
+        string inputPassword = Console.ReadLine();
+
+        return inputPassword == password;
+    }
     private static decimal GetPrice(string item)
     {
         switch (item)
         {
             case "Apple": return 1.99m;
             case "Banana": return 2.49m;
+            case "Grapes": return 4.29m;
             case "Kiwi": return 0.99m;
             case "Mango": return 2.29m;
             case "Orange": return 0.99m;
@@ -29,14 +38,22 @@ internal class Program
 
     private static int Main(string[] args)
     {
+        if (VerifyPassword())
+        {
+            Console.Clear();
+            Console.WriteLine("Password correct!"+"\n"+"Please enter the name of the item scanned." + "\n" + "When finished please press 'Enter'.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid password. Exiting program...");
+            Environment.Exit(0);
+        }
         decimal subTotal = 0m;
         decimal taxRate = 0.075m;
         bool loyaltyCustomer;
         decimal memberDiscount = 0.05m;
         
         StringBuilder receipt = new StringBuilder();
-
-        Console.WriteLine("Please enter the name of the item scanned."+"\n"+"When finished please press 'Enter'.");
 
         while (true)
         {
