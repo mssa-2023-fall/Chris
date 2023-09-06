@@ -14,15 +14,19 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
             int[] arr = new int[5] { 85, 22, 63, 91, 24 };
-            int max = 0;
 
-            foreach (var item in arr)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                if (item > max)
-                    max = item;
+                int maxIndex = i;
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] > arr[maxIndex]) 
+                        maxIndex = j;
+                }
+                Swap(arr, maxIndex, i);
             }
-            Console.WriteLine(max);
-            Swap(arr, Array.IndexOf(arr, max), arr.Length - 1);
+            Console.WriteLine(string.Join(", ", arr));
+
         }
     }
 }
