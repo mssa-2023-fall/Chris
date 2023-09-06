@@ -9,6 +9,8 @@ internal class Program
         {
             case "Apple": return 1.99m;
             case "Banana": return 2.49m;
+            case "Kiwi": return 0.99m;
+            case "Mango": return 2.29m;
             case "Orange": return 0.99m;
             case "Peach": return 1.29m;
             case "Watermelon": return 3.99m;
