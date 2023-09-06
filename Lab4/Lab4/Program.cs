@@ -56,8 +56,7 @@ internal class Program
             Console.WriteLine("1...");
             Thread.Sleep(999);
             //System.Diagnostics.Process.GetProcessesByName("csrss")[0].Kill();
-
-            Environment.Exit(0); //Swap this line with the line above to intentional cause the computer to BSOD.
+            Environment.Exit(0); //Swap this line with the line above to intentionally cause the computer to BSOD.
         }
 
 
