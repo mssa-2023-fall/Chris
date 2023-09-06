@@ -55,7 +55,7 @@ internal class Program
 
 
         }
-        decimal taxValue = Math.Round(decimal.Multiply(subTotal, taxRate),2);
+        decimal taxValue = Math.Round(subTotal * taxRate, 2);
         decimal totalPrice = subTotal + taxValue;
         decimal memberDiscountTotal = Math.Round(subTotal * memberDiscount, 2);
 
