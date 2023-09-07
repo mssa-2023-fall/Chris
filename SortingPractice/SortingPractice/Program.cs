@@ -25,7 +25,7 @@ namespace ConsoleApp1
                 }
                 Swap(arr, maxIndex, i);
             }
-            Console.WriteLine(string.Join(", ", arr));
+            Console.WriteLine(string.Join(",", arr));
 
         }
     }
