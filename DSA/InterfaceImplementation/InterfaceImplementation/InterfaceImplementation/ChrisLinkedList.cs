@@ -11,9 +11,9 @@ namespace InterfaceImplementation
     {
         private Node<T> head;
         private Node<T> tail;
-        
-        public INode<T> Head { get { return head; } }
-        public INode<T> Tail { get { return tail; } }
+
+        public INode<T> Head => head;
+        public INode<T> Tail => tail;
         public IEnumerable<INode<T>> Nodes
         {
             get
@@ -31,25 +31,43 @@ namespace InterfaceImplementation
             }
         }
         public int Count { get; private set; }
-
         public void AddFirst(INode<T> value)
         {
-           Node<T> addNode = value as Node<T>;
-            addNode.NextNode = head;
-            head = addNode;
+                Node<T> addNode = value as Node<T>;
+                addNode.NextNode = head;
+                head = addNode;
 
-            if (tail == null)
-            {
-                tail = head;
-            }
+                if (tail == null)
+                {
+                    tail = head;
+                }
             Count++;
         }
-
         public void InsertAfterNodeIndex(INode<T> value, int position)
         {
+            Node<T> newNode = value as Node<T>;
+            if (newNode == null)
+            {
+                throw new ArgumentException("The provided node is not of the correct type.");
+            }
+
+            if (position < 0 || position >= Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(position), "Position is out of range.");
+            }
+
             if (position == 0)
             {
-                AddFirst(value);
+                newNode.NextNode = head.NextNode;
+                head.NextNode = newNode;
+
+                if (newNode.NextNode == null)
+                {
+                    tail = newNode;
+                }
+
+                Count++;
+                return;
             }
 
             Node<T> thisNode = head;
@@ -57,17 +75,18 @@ namespace InterfaceImplementation
             {
                 thisNode = thisNode.NextNode;
             }
-            Node<T> newNode = value as Node<T>;
+
             newNode.NextNode = thisNode.NextNode;
             thisNode.NextNode = newNode;
 
-            if(newNode.NextNode == null)
-            { 
-                tail = newNode; 
+            if (newNode.NextNode == null)
+            {
+                tail = newNode;
             }
-            Count++;
 
+            Count++;
         }
+
         public void AddLast(INode<T> value)
         {
             Node<T> newNode = value as Node<T>;
@@ -98,35 +117,52 @@ namespace InterfaceImplementation
                 Count--;
             }
         }
-        public void RemoveAt(int IndexPosition)
+        public void RemoveAt(int indexPosition)
         {
-            if (IndexPosition == 0)
+            { 
+            if (indexPosition == 0)
             {
                 RemoveFirst();
                 return;
             }
+            if (indexPosition < 0 || indexPosition >= Count || indexPosition == null)
+            {
+                throw new InvalidOperationException("IndexPosition is out of range.");
+            }
             Node<T> thisNode = head;
-            for (int i = 1; i < IndexPosition; i++)
+            for (int i = 1; i < indexPosition; i++)
             {
                 thisNode = thisNode.NextNode;
             }
-                thisNode.NextNode = thisNode.NextNode.NextNode;
-            if (thisNode.NextNode == null)
+            if (thisNode.NextNode == tail)
             {
                 tail = thisNode;
+                thisNode.NextNode = null;
+            }
+            else
+            {
+                thisNode.NextNode = thisNode.NextNode.NextNode;
+            }
             }
             Count--;
         }
-        
+
+
         public void RemoveLast()
         {
-            Node<T> thisNode = head;
-            while (thisNode.NextNode != tail)
             {
-                thisNode = thisNode.NextNode;
+                if (head == null)
+                {
+                    throw new InvalidOperationException();
+                }
+                Node<T> thisNode = head;
+                while (thisNode.NextNode != tail)
+                {
+                    thisNode = thisNode.NextNode;
+                }
+                tail = thisNode;
+                thisNode.NextNode = null;
             }
-            tail = thisNode;
-            thisNode.NextNode = null;
             Count--;
         }
         public INode<T>? FindFirst(T value)
@@ -158,7 +194,7 @@ namespace InterfaceImplementation
             return nodes.ToArray();
         }
 
-        private class Node<T> : INode<T>
+        public class Node<T> : INode<T>
         {
             public T Content { get; set; }
             public Node<T> NextNode { get; set; }

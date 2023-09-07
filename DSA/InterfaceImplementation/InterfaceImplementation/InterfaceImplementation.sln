@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceImplementation", "InterfaceImplementation\InterfaceImplementation.csproj", "{FAC29F06-A060-4CC1-813B-00129D2C43A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "InterfaceImplementation\LinkedList.csproj", "{FAC29F06-A060-4CC1-813B-00129D2C43A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTest", "LinkedListTest\LinkedListTest.csproj", "{79D7AB01-D275-4825-93ED-9921BA5200D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FAC29F06-A060-4CC1-813B-00129D2C43A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC29F06-A060-4CC1-813B-00129D2C43A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAC29F06-A060-4CC1-813B-00129D2C43A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D7AB01-D275-4825-93ED-9921BA5200D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D7AB01-D275-4825-93ED-9921BA5200D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D7AB01-D275-4825-93ED-9921BA5200D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D7AB01-D275-4825-93ED-9921BA5200D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
