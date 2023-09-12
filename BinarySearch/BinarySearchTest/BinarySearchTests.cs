@@ -44,14 +44,14 @@ namespace BinarySearchTest
 
 
         [TestMethod]
-        public void BinarySearchDuplicateElementsReturnsCorrectValue()
+        public void BinarySearchDuplicateElementsReturnsFirstCorrectValue()
         {
             int[] array = { 1, 2, 3, 3, 3, 4, 5 };
-            int target = 3;
+            int target = 2;
 
             int result = BinarySearch.binarySearch(array, target);
 
-            Assert.AreEqual(3, result);
+            Assert.AreEqual(2, result);
         }
 
         [TestMethod]
