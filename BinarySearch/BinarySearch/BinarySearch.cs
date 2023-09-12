@@ -30,6 +30,12 @@ public class BinarySearch
         int low = 0;
         int high = array.Length - 1;
 
+        if (array.Length == 0) return -1;
+        if (array.Length == 1)
+        {
+            if (array[0] == target) return 0;
+            else return -1;
+        }
         while (low <= high)
         {
             int middle = low + (high - low) / 2;
