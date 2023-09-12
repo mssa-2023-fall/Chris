@@ -18,11 +18,11 @@
                         {
                             for (int f = 0; f < abc123.Length; f++)
                             {
-                                string candidatePassword = $"{abc123[a]}{abc123[b]}{abc123[c]}{abc123[d]}{abc123[e]}{abc123[f]}";
+                                string testPassword = $"{abc123[a]}{abc123[b]}{abc123[c]}{abc123[d]}{abc123[e]}{abc123[f]}";
 
-                                if (candidatePassword == password)
+                                if (testPassword == password)
                                 {
-                                    Console.WriteLine($"Password cracked: {candidatePassword}");
+                                    Console.WriteLine($"Password cracked: {testPassword}");
                                     return;
                                 }
                             }
