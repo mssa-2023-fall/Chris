@@ -44,7 +44,7 @@ namespace BinarySearchTest
 
 
         [TestMethod]
-        public void BinarySearchDuplicateElementsReturnsCorrectValue()
+        public void BinarySearchDuplicateElementsReturnsFirstCorrectValue()
         {
             int[] array = { 1, 2, 3, 3, 3, 4, 5 };
             int target = 3;
