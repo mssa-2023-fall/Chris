@@ -8,13 +8,13 @@ public class Program
     private static void Main(string[] args)
     {
         //Create the dictionary
-        Dictionary<string, Customer> customerDictionary = new Dictionary<string, Customer>();
+        Dictionary<string, Customer> customerDictionary = new();
       
-        //Add customers
-        Customer customerOne = new Customer("johndoe@gmail.com", "John", "password0", 1111222233334444);
-        Customer customerTwo = new Customer("janesmith@hotmail.com", "Jane", "password1", 1117222233335444);
-        Customer customerThree = new Customer("fred@gmail.com", "Fred", "password2", 2222333344445555);
-        Customer customerFour = new Customer("mikejohnson@yahoo.com", "Mike", "password3",1781422233835432);
+        //Create customers
+        Customer customerOne = new("johndoe@gmail.com", "John", "password0", 1111222233334444);
+        Customer customerTwo = new("janesmith@hotmail.com", "Jane", "password1", 1117222233335444);
+        Customer customerThree = new("fred@gmail.com", "Fred", "password2", 2222333344445555);
+        Customer customerFour = new("mikejohnson@yahoo.com", "Mike", "password3", 1781422233835432);
         
         //Generate password salt
         customerOne.GenerateSalt();
@@ -28,7 +28,7 @@ public class Program
         customerThree.GeneratePasswordHash();
         customerFour.GeneratePasswordHash();
 
-        //Search customer dictionary
+        //Add customers to dictionary
         customerDictionary.Add(customerOne.Email, customerOne);
         customerDictionary.Add(customerTwo.Email, customerTwo);
         customerDictionary.Add(customerThree.Email, customerThree);
