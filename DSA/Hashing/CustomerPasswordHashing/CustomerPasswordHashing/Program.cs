@@ -31,11 +31,11 @@ public class Program
         //Console prompts to collect email and password
         Console.WriteLine("Please enter your email:");
         var userEmail = Console.ReadLine();
-        if (userEmail == null) Console.WriteLine("Please ender a valid email:");
+        if (userEmail == null) throw new NullReferenceException("Invalid email. Please reload the application and try again.");
         
         Console.WriteLine("\nPlease enter your password:");
         var userPassword = Console.ReadLine();
-        if (userPassword == null) Console.WriteLine("Please ender a valid password:");
+        if (userPassword == null) throw new NullReferenceException("Invalid password. Please reload the application and try again.");
 
         Console.Clear();
 
@@ -45,23 +45,30 @@ public class Program
         //Then generates a hashed password using the original salt with the console provided user password
         //If the password hashes match, access is granted. If they don't match, "incorrect password"
         //If the email is not found, "Access denied"
-        if (customerDictionary.TryGetValue(userEmail, out Customer customerIsInDictionary))
+        if (customerDictionary.TryGetValue(userEmail, out Customer? customerIsInDictionary))
         {
-            byte[] storedSalt = customerIsInDictionary.Salt;
-            Customer tempCustomer = new Customer(userEmail, "", userPassword, 0)
+            if (customerIsInDictionary != null)
             {
-                Salt = storedSalt
-            };
+                byte[] storedSalt = customerIsInDictionary.Salt;
+                Customer tempCustomer = new Customer(userEmail, "", userPassword, 0)
+                {
+                    Salt = storedSalt
+                };
 
-            tempCustomer.GeneratePasswordHash();
+                tempCustomer.GeneratePasswordHash();
 
-            if (customerIsInDictionary.PasswordHash == tempCustomer.PasswordHash)
-            {
-                Console.WriteLine("Access granted.");
+                if (customerIsInDictionary.PasswordHash == tempCustomer.PasswordHash)
+                {
+                    Console.WriteLine("Access granted.");
+                }
+                else
+                {
+                    Console.WriteLine("Incorrect password.");
+                }
             }
             else
             {
-                Console.WriteLine("Incorrect password.");
+                Console.WriteLine("Access denied.");
             }
         }
         else
