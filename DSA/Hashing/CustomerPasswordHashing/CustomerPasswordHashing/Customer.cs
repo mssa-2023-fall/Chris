@@ -26,6 +26,8 @@ namespace CustomerPasswordHashing
             Name = name;
             Password = password;
             CreditCard = creditCard;
+            Salt = new byte[0];
+            PasswordHash = string.Empty;
         }
 
         public void Register()
