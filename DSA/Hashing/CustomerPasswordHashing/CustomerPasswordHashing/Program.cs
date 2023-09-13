@@ -15,18 +15,12 @@ public class Program
         Customer customerTwo = new("janesmith@hotmail.com", "Jane", "password1", 1117222233335444);
         Customer customerThree = new("fred@gmail.com", "Fred", "password2", 2222333344445555);
         Customer customerFour = new("mikejohnson@yahoo.com", "Mike", "password3", 1781422233835432);
-        
-        //Generate password salt
-        customerOne.GenerateSalt();
-        customerTwo.GenerateSalt();
-        customerThree.GenerateSalt();
-        customerFour.GenerateSalt();
 
-        //Generate hashed passwords
-        customerOne.GeneratePasswordHash();
-        customerTwo.GeneratePasswordHash();
-        customerThree.GeneratePasswordHash();
-        customerFour.GeneratePasswordHash();
+        //Register method generate password salt & password hash
+        customerOne.Register();
+        customerTwo.Register();
+        customerThree.Register();
+        customerFour.Register();
 
         //Add customers to dictionary
         customerDictionary.Add(customerOne.Email, customerOne);

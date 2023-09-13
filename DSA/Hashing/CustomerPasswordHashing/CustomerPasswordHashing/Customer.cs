@@ -28,6 +28,12 @@ namespace CustomerPasswordHashing
             CreditCard = creditCard;
         }
 
+        public void Register()
+        {
+            GenerateSalt();
+            GeneratePasswordHash();
+        }
+
         public void GenerateSalt()
         {
             string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
