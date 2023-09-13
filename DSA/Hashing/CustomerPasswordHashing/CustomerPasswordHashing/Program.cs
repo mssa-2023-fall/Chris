@@ -42,9 +42,9 @@ public class Program
         Console.Clear();
 
 
-        //Logic that takes the provided email, assembles a temp customer with userEmail and userPassword
-        //Then searches the customer dictionary for a matching email, gets the password hash
-        //generates a hashed password using the original salt with the provided user password
+        //Logic that takes the console provided email, assembles a temp customer with userEmail and userPassword
+        //Then searches the customer dictionary for a matching email.
+        //Then generates a hashed password using the original salt with the console provided user password
         //If the password hashes match, access is granted. If they don't match, "incorrect password"
         //If the email is not found, "Access denied"
         if (customerDictionary.TryGetValue(userEmail, out Customer customerIsInDictionary))

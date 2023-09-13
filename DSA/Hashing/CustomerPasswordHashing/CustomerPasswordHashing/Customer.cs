@@ -11,6 +11,7 @@ namespace CustomerPasswordHashing
     public class Customer
     {
         public static Random random = new Random();
+
         //Everything public for initial build. Access modifiers can be fixed later.
         public string Email {  get; set; }
         public string Name { get; set; }
