@@ -10,6 +10,7 @@ namespace CustomerPasswordHashing
 {
     public class Customer
     {
+        public static Random random = new Random();
         //Everything public for initial build. Access modifiers can be fixed later.
         public string Email {  get; set; }
         public string Name { get; set; }
@@ -28,13 +29,12 @@ namespace CustomerPasswordHashing
 
         public void GenerateSalt()
         {
-            Random rand = new Random();
-            var charIzard = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+            string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
             Salt = new byte[Password.Length];
 
             for (int i = 0; i < Password.Length; i++)
             {
-                Salt[i] = (byte)charIzard[rand.Next(charIzard.Length)];
+                Salt[i] = (byte)chars[random.Next(chars.Length)];
             }
         }
 
