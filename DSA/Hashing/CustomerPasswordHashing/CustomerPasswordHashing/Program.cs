@@ -36,9 +36,13 @@ public class Program
 
         //Console prompts to collect email and password
         Console.WriteLine("Please enter your email:");
-        string userEmail = Console.ReadLine();
+        var userEmail = Console.ReadLine();
+        if (userEmail == null) Console.WriteLine("Please ender a valid email:");
+        
         Console.WriteLine("\nPlease enter your password:");
-        string userPassword = Console.ReadLine();
+        var userPassword = Console.ReadLine();
+        if (userPassword == null) Console.WriteLine("Please ender a valid password:");
+
         Console.Clear();
 
 
