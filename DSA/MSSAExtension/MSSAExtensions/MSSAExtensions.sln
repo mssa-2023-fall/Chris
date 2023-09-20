@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSAExtensions", "MSSAExtensions\MSSAExtensions.csproj", "{2EC055B4-F7E5-409F-A4B6-C3025497F444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSAExtensionsTest", "MSSAExtensionsTest\MSSAExtensionsTest.csproj", "{F18FB2EF-B31A-4C0B-9D74-3ED9D169A71C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EC055B4-F7E5-409F-A4B6-C3025497F444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC055B4-F7E5-409F-A4B6-C3025497F444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC055B4-F7E5-409F-A4B6-C3025497F444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC055B4-F7E5-409F-A4B6-C3025497F444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F18FB2EF-B31A-4C0B-9D74-3ED9D169A71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18FB2EF-B31A-4C0B-9D74-3ED9D169A71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18FB2EF-B31A-4C0B-9D74-3ED9D169A71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18FB2EF-B31A-4C0B-9D74-3ED9D169A71C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04376B08-2EE8-435A-BC73-A0DFB3B9287E}
+	EndGlobalSection
+EndGlobal
