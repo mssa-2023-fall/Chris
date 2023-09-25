@@ -12,7 +12,7 @@ public class PersonEventArgs : EventArgs
         Name = name;
     }
 }
-}
+
 
 public class Publisher
 {
