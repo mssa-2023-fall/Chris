@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "The_dropWhile_Function", "The_dropWhile_Function\The_dropWhile_Function.csproj", "{881E3871-3872-4107-9C80-86ED59E886BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pillars", "Pillars\Pillars.csproj", "{8AFF5CB9-6AF9-41C7-A7DC-7F0C217CFB2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalancedBinaryTree", "BalancedBinaryTree\BalancedBinaryTree.csproj", "{642DE8CC-C67E-4528-91D9-C4C229A7F12F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventAndDelegate", "EventAndDelegate\EventAndDelegate.csproj", "{B41B56CC-A9B6-43C7-8317-D04D4E47C59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayToBinaryTree", "ArrayToBinaryTree\ArrayToBinaryTree.csproj", "{90735E2F-B72C-4834-A110-1363FE4F3A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectPangram", "DetectPangram\DetectPangram.csproj", "{5C697C10-73DE-4024-8D42-5B8844588A89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{881E3871-3872-4107-9C80-86ED59E886BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881E3871-3872-4107-9C80-86ED59E886BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881E3871-3872-4107-9C80-86ED59E886BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881E3871-3872-4107-9C80-86ED59E886BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AFF5CB9-6AF9-41C7-A7DC-7F0C217CFB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFF5CB9-6AF9-41C7-A7DC-7F0C217CFB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFF5CB9-6AF9-41C7-A7DC-7F0C217CFB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFF5CB9-6AF9-41C7-A7DC-7F0C217CFB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642DE8CC-C67E-4528-91D9-C4C229A7F12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642DE8CC-C67E-4528-91D9-C4C229A7F12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642DE8CC-C67E-4528-91D9-C4C229A7F12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642DE8CC-C67E-4528-91D9-C4C229A7F12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41B56CC-A9B6-43C7-8317-D04D4E47C59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41B56CC-A9B6-43C7-8317-D04D4E47C59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41B56CC-A9B6-43C7-8317-D04D4E47C59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41B56CC-A9B6-43C7-8317-D04D4E47C59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90735E2F-B72C-4834-A110-1363FE4F3A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90735E2F-B72C-4834-A110-1363FE4F3A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90735E2F-B72C-4834-A110-1363FE4F3A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90735E2F-B72C-4834-A110-1363FE4F3A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C697C10-73DE-4024-8D42-5B8844588A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C697C10-73DE-4024-8D42-5B8844588A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C697C10-73DE-4024-8D42-5B8844588A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C697C10-73DE-4024-8D42-5B8844588A89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {931CA250-B312-4173-9DE7-C8C6E95AF93D}
+	EndGlobalSection
+EndGlobal
