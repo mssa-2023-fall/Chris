@@ -280,7 +280,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(768, 398);
+            tabPage2.Size = new Size(524, 345);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Amortization Schedule";
             tabPage2.UseVisualStyleBackColor = true;
