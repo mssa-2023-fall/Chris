@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<AzureFunctionsVersion>v4</AzureFunctionsVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- Required for Azure Functions -->
+		<PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+		<PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.19.0" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" Version="3.0.2" />
+		<PackageReference Include="Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator" Version="1.2.0" />
+
+		<!-- Required for Azure Blob Storage -->
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.18.0" />
+
+		<!-- Required for ASP.NET Core MVC components like IActionResult -->
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+
+		<!-- Other required packages -->
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+</Project>
